@@ -35,7 +35,7 @@ namespace MachinesRUs.Machines
         }
 
         // Required for AbstractMachine implementation.
-        public void Update()
+        public override void Update()
         {
             // Set the previous machine for the first machine.
             machines[0].Previous = Previous;
