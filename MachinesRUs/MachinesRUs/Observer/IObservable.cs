@@ -28,5 +28,15 @@ namespace MachinesRUs.Observer
         /// the IObserver object that should receive updates on this object's properties.
         /// </param>
         void Subscribe(IObserver observer);
+
+        /// <summary>
+        /// Unsubscribes an IObserver object from receiving updates about the IObservable
+        /// object.
+        /// </summary>
+        /// <param name="observer">
+        /// the IObserver object that should no longer receive updates on this object's
+        /// properties.
+        /// </param>
+        void Unsubscribe(IObserver observer);
     }
 }

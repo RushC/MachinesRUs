@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MachinesRUs.Machines;
 using MachinesRUs.Observer;
+using MachinesRUs.Controls;
 
 namespace MachinesRUs
 {
-    public partial class ClientForm : Form, IObserver
+    public partial class ClientForm : Form
     {
         // The list of machines in the form.
         private List<IMachine> machines = new List<IMachine>();
@@ -20,21 +21,33 @@ namespace MachinesRUs
         public ClientForm()
         {
             InitializeComponent();
+
+            // Create a new pressing machine.
+            var machines = new AtomicMachine[] {
+                new PressingMachine(),
+                new HeatingMachine(),
+                new PressingMachine(),
+                new HeatingMachine(),
+                new PressingMachine(),
+                new HeatingMachine()
+            };
+
+            var composite = new CompositeMachine(machines);
+
+
+            // Start the machines.
+            composite.Start();
         }
 
-        // Needed for IObserver implementation.
-        public void Update(IObservable observable)
+        private void machineView1_Deleted(object sender, EventArgs e)
         {
-            // Ensure that the observable object is an IMachine.
-            if (!typeof(IMachine).IsAssignableFrom(observable.GetType()))
-                return;
+            Controls.Remove((Control)sender);
+        }
 
-            // Cast the observable to an IMachine.
-            var machine = (IMachine)observable;
-
-            /**
-             * TODO: Make this do a thing.
-             */
+        private void AddMachineButton_Click(object sender, EventArgs e)
+        {
+            var machine = new HeatingMachine();
+            machineListView1.AddMachine(machine);
         }
     }
 }

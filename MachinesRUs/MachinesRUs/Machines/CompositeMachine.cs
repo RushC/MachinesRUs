@@ -30,7 +30,7 @@ namespace MachinesRUs.Machines
             // Iterate through each of the machines.
             for (var i = 1; i < machines.Length; i++)
                 // Attach each previous machine to the current machine's input.
-                machines[i].Previous = machines[i - 1];
+                machines[i].SetPrevious(machines[i - 1]);
 
         }
 
@@ -38,7 +38,7 @@ namespace MachinesRUs.Machines
         public override void Update()
         {
             // Set the previous machine for the first machine.
-            machines[0].Previous = Previous;
+            machines[0].SetPrevious(Previous);
 
             // Iterate through all of the internal machines.
             foreach (var machine in machines)

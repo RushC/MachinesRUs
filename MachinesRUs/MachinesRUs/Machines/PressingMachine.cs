@@ -15,12 +15,14 @@ namespace MachinesRUs.Machines
         // Needed for AbstractMachine implementation.
         public override void Update()
         {
-            // Determine the input pressure.
+            // Determine the input temperature and pressure.
+            var inputTemperature = Previous == null ? 0 : Previous.GetTemperature();
             var inputPressure = Previous == null ? 0 : Previous.GetPressure();
 
             // Add an arbitrary amount of pressure to the input pressure.
             var arbitraryAmountOfPressure = new Random().Next(10);
-            Pressure = GetPressure() + arbitraryAmountOfPressure + inputPressure;
+            Pressure = arbitraryAmountOfPressure + inputPressure;
+            Temperature = inputTemperature;
         }
     }
 }

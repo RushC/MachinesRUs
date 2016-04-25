@@ -34,7 +34,7 @@ namespace MachinesRUs.Machines
         /// The previous IMachine's pressure and temperature may be used when
         /// determining the temperature and pressure.
         /// </summary>
-        public IMachine Previous { get; set; }
+        public IMachine Previous { get; private set; }
 
         /// <summary>
         /// Gets or sets the pressure to be returned by the GetPressure method.
@@ -87,6 +87,15 @@ namespace MachinesRUs.Machines
         }
 
         // Needed for implementation of IMachine.
+        public void SetPrevious(IMachine previous)
+        {
+            Previous = previous;
+
+            // Update the machine.
+            Update();
+        }
+
+        // Needed for implementation of IMachine.
         public void Start()
         {
             // Ensure only one thread can run this method at a time.
@@ -102,7 +111,7 @@ namespace MachinesRUs.Machines
                     while (running)
                     {
                         // Wait for some arbitrary number of seconds.
-                        var arbitraryNumberOfSeconds = new Random().Next(10);
+                        var arbitraryNumberOfSeconds = new Random().Next(3);
                         Thread.Sleep(arbitraryNumberOfSeconds * 1000);
 
                         // Update the machine.

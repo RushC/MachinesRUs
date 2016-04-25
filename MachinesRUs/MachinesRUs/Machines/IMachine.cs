@@ -26,6 +26,16 @@ namespace MachinesRUs.Machines
         double GetTemperature();
 
         /// <summary>
+        /// Sets the IMachine object that is connected as the input of this IMachine
+        /// object.
+        /// </summary>
+        /// <param name="previous">
+        /// the IMachine object that should be connected as the input of this IMachine
+        /// object.
+        /// </param>
+        void SetPrevious(IMachine previous);
+
+        /// <summary>
         /// Starts running the machine in a new thread. This will begin the machine's
         /// cycle that will periodically call the update method.
         /// </summary>
