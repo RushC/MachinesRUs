@@ -51,6 +51,9 @@ namespace MachinesRUs.Controls
 
                 // Update the view to the machine's status.
                 Update(machine);
+
+                // Display the name of the machine type.
+                TypeLabel.Text = machine.GetType().Name;
             }
         }
 
