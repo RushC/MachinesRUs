@@ -28,39 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddMachineButton = new System.Windows.Forms.Button();
-            this.machineListView1 = new MachinesRUs.Controls.MachineListView();
+            this.addMachineButton2 = new MachinesRUs.Controls.AddMachineButton();
+            this.addMachineButton1 = new MachinesRUs.Controls.AddMachineButton();
+            this.MachineList = new MachinesRUs.Controls.MachineListView();
             this.SuspendLayout();
             // 
-            // AddMachineButton
+            // addMachineButton2
             // 
-            this.AddMachineButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddMachineButton.Location = new System.Drawing.Point(334, 12);
-            this.AddMachineButton.Name = "AddMachineButton";
-            this.AddMachineButton.Size = new System.Drawing.Size(75, 23);
-            this.AddMachineButton.TabIndex = 1;
-            this.AddMachineButton.Text = "Add";
-            this.AddMachineButton.UseVisualStyleBackColor = true;
-            this.AddMachineButton.Click += new System.EventHandler(this.AddMachineButton_Click);
+            this.addMachineButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addMachineButton2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.addMachineButton2.Location = new System.Drawing.Point(372, 61);
+            this.addMachineButton2.MachineType = "Pressing";
+            this.addMachineButton2.Name = "addMachineButton2";
+            this.addMachineButton2.Size = new System.Drawing.Size(162, 41);
+            this.addMachineButton2.TabIndex = 4;
+            this.addMachineButton2.AddMachine += new System.EventHandler(this.AddMachineButton_Click);
             // 
-            // machineListView1
+            // addMachineButton1
             // 
-            this.machineListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.addMachineButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addMachineButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.addMachineButton1.Location = new System.Drawing.Point(372, 13);
+            this.addMachineButton1.MachineType = "Heating";
+            this.addMachineButton1.Name = "addMachineButton1";
+            this.addMachineButton1.Size = new System.Drawing.Size(162, 41);
+            this.addMachineButton1.TabIndex = 3;
+            this.addMachineButton1.AddMachine += new System.EventHandler(this.AddMachineButton_Click);
+            // 
+            // MachineList
+            // 
+            this.MachineList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.machineListView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.machineListView1.Location = new System.Drawing.Point(13, 13);
-            this.machineListView1.Name = "machineListView1";
-            this.machineListView1.Size = new System.Drawing.Size(315, 338);
-            this.machineListView1.TabIndex = 2;
+            this.MachineList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MachineList.Location = new System.Drawing.Point(13, 13);
+            this.MachineList.Name = "MachineList";
+            this.MachineList.Size = new System.Drawing.Size(353, 338);
+            this.MachineList.TabIndex = 2;
             // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 363);
-            this.Controls.Add(this.machineListView1);
-            this.Controls.Add(this.AddMachineButton);
+            this.ClientSize = new System.Drawing.Size(541, 363);
+            this.Controls.Add(this.addMachineButton2);
+            this.Controls.Add(this.addMachineButton1);
+            this.Controls.Add(this.MachineList);
             this.Name = "ClientForm";
             this.Text = "ClientForm";
             this.ResumeLayout(false);
@@ -69,8 +82,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button AddMachineButton;
-        private Controls.MachineListView machineListView1;
+        private Controls.MachineListView MachineList;
+        private Controls.AddMachineButton addMachineButton1;
+        private Controls.AddMachineButton addMachineButton2;
 
 
     }

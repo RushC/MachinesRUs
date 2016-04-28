@@ -34,7 +34,6 @@ namespace MachinesRUs
 
             var composite = new CompositeMachine(machines);
 
-
             // Start the machines.
             composite.Start();
         }
@@ -46,8 +45,22 @@ namespace MachinesRUs
 
         private void AddMachineButton_Click(object sender, EventArgs e)
         {
-            var machine = new HeatingMachine();
-            machineListView1.AddMachine(machine);
+            // Ensure an AddMachineButton called was the sender.
+            if (!(sender is AddMachineButton))
+                return;
+
+            // Cast the sender to its correct type.
+            var addMachineButton = (AddMachineButton)sender;
+
+            // Retrieve the type of machine from the button.
+            var machineType = addMachineButton.MachineType;
+
+            // Create a new machine of the specified type.
+            var machineFactory = MachineFactory.GetInstance();
+            var machine = machineFactory.CreateMachine(machineType);
+
+            // Add the machine to the MachineList.
+            MachineList.AddMachine(machine);
         }
     }
 }

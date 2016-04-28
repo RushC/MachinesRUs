@@ -20,3 +20,4 @@ C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debu
 C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.csproj.GenerateResource.Cache
 C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.exe
 C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.pdb
+P:\Private\Git\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.Controls.AddMachineButton.resources

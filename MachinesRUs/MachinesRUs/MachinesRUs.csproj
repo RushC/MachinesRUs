@@ -50,6 +50,12 @@
     <Compile Include="ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AddMachineButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddMachineButton.Designer.cs">
+      <DependentUpon>AddMachineButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MachineListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddMachineButton.resx">
+      <DependentUpon>AddMachineButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MachineListView.resx">
       <DependentUpon>MachineListView.cs</DependentUpon>
