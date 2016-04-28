@@ -9,3 +9,14 @@ P:\Private\Git\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.csproj.
 P:\Private\Git\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.exe
 P:\Private\Git\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.pdb
 P:\Private\Git\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.Controls.MachineListView.resources
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\bin\Debug\MachinesRUs.exe.config
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\bin\Debug\MachinesRUs.exe
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\bin\Debug\MachinesRUs.pdb
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.csprojResolveAssemblyReference.cache
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.ClientForm.resources
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.Controls.MachineListView.resources
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.Controls.MachineView.resources
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.Properties.Resources.resources
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.csproj.GenerateResource.Cache
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.exe
+C:\Users\Nathaniel\Documents\GitHub\MachinesRUs\MachinesRUs\MachinesRUs\obj\Debug\MachinesRUs.pdb
