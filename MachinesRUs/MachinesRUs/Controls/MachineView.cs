@@ -58,6 +58,15 @@ namespace MachinesRUs.Controls
         }
 
         /// <summary>
+        /// Gets or sets the display name of the Machine view.
+        /// </summary>
+        public string MachineName
+        {
+            get { return TypeLabel.Text; }
+            set { TypeLabel.Text = value; }
+        }
+
+        /// <summary>
         /// Constructs a new MachineView that doesn't visualize any IMachine
         /// object by default.
         /// </summary>

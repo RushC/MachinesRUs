@@ -16,6 +16,12 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+
+                // Unsubscribe the view from the machine.
+                machine.Unsubscribe(this);
+
+                // Stop the machine.
+                machine.Stop();
             }
             base.Dispose(disposing);
         }

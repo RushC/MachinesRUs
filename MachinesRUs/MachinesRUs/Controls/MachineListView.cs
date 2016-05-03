@@ -40,6 +40,21 @@ namespace MachinesRUs.Controls
         /// </param>
         public void AddMachine(IMachine machine)
         {
+            AddMachine(machine, machine.GetType().Name);
+        }
+
+        /// <summary>
+        /// Adds an IMachine object to the MachineListView and places it at the
+        /// end of the list.
+        /// </summary>
+        /// <param name="machine">
+        /// the IMachine object to add to the MachineListView.
+        /// </param>
+        /// <param name="machineName">
+        /// the name to display for the machine in the list.
+        /// </param>
+        public void AddMachine(IMachine machine, string machineName)
+        {
             // Set the current last machine as the new machine's input.
             if (machines.Count > 0)
                 machine.SetPrevious(machines[machines.Count - 1]);
@@ -50,11 +65,27 @@ namespace MachinesRUs.Controls
             // Add a view for the machine.
             var machineView = new MachineView();
             machineView.Machine = machine;
+            machineView.MachineName = machineName;
             machineView.Deleted += MachineDeleted;
             MachinePanel.Controls.Add(machineView);
+        }
 
-            // Start the machine.
-            machine.Start();
+        /// <summary>
+        /// Starts all of the machines in the list.
+        /// </summary>
+        public void StartMachines()
+        {
+            foreach (var machine in machines)
+                machine.Start();
+        }
+
+        /// <summary>
+        /// Stops all of the machines in the list.
+        /// </summary>
+        public void StopMachines()
+        {
+            foreach (var machine in machines)
+                machine.Stop();
         }
 
         /// <summary>

@@ -90,9 +90,6 @@ namespace MachinesRUs.Machines
         public void SetPrevious(IMachine previous)
         {
             Previous = previous;
-
-            // Update the machine.
-            Update();
         }
 
         // Needed for implementation of IMachine.
@@ -110,13 +107,17 @@ namespace MachinesRUs.Machines
                     // Loop until the machine is no longer running.
                     while (running)
                     {
+                        // Update the machine.
+                        Update();
+
                         // Wait for some arbitrary number of seconds.
                         var arbitraryNumberOfSeconds = new Random().Next(3);
                         Thread.Sleep(arbitraryNumberOfSeconds * 1000);
-
-                        // Update the machine.
-                        Update();
                     }
+
+                    // Reset the temperature and pressure to zero.
+                    Temperature = 0;
+                    Pressure = 0;
                 });
 
                 // Start the thread.
